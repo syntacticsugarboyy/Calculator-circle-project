@@ -1,19 +1,105 @@
-.display {
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
+:root{
+  --bg-color:#3b4664;
+  --inner-color:#252d44;
+  --main-color:#eeeeee;
+  --main-font:'DM Sans', sans-serif;
+}
+body{
+  height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--bg-color);
+}
+main{
+  display: flex;
   flex-direction: column;
-  padding: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+  max-width: 250px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  border: 2.5px solid #252d44;
+  gap: 20px;
+  background-color: var(--bg-color);
 }
-.display .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 24px;
+header{
+  display: flex;
 }
-.display .current-operand {
-  color: #fff;
-  font-size: 40px;
+h3{
+  color:var(--main-color);
+  font-family: var(--main-font);
+  padding: 0;
+  margin: 0;
+}
+#display{
+  /* width: 100%; */
+  min-height: 80px;
+  background-color: #181F32;
+  color:var(--main-color);
+  font-size: 30px;
+  text-align: right;
+  border-style: none;
+  border-radius: 10px;
+  outline: none;
+  font-family: var(--main-font);
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  background-color: #252d44;
+  padding: 15px;
+  border-radius: 10px;
+}
+button{
+  width: 100%;
+  height: 45px;
+  background-color: var(--main-color);
+  color: #000000b6;
+  cursor: pointer;
+  outline: none;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-family:var(--main-font);
+  box-shadow: #eeeeee88 2px 3px;
+}
+button:active{
+  transform: scale(0.95);
+  box-shadow: #252d44 1px 1px;
+}
+button[name]{
+  background-color:#647199 ;
+  box-shadow: #64719990 2px 3px;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 15px;
+}
+button[name]:active{
+  transform: scale(0.95);
+  box-shadow: #252d44 1px 1px 1px 1px;
+}
+.clear{
+  grid-column: span 2;
+  background-color:#647199;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: #64719988 2px 3px;
+}
+.clear:active{
+  transform: scale(0.95);
+  box-shadow: #252d44 1px 1px;
+}
+.equal{
+  grid-column: span 2;
+  background: #D24031;
+  color: var(--main-color);
+  font-weight: 500;
+  font-size: 15px;
+  box-shadow: #D2403190 2px 3px;
+}
+.equal:active{
+  transform: scale(0.95);
+  box-shadow: #252d44 1px 1px;
 }
