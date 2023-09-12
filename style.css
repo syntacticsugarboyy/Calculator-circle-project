@@ -1,19 +1,361 @@
-.display {
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  background-color: #fff;
+  color: #14213d;
+}
+
+.WrapSec{
+  background-color:#FCA311 ;
+  max-width: 80vw;
+  width: 100%;
+  height: 65vh;
+  padding: 20rem;
+  margin: auto;
   display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
+  border-radius: .9rem;
   flex-direction: column;
-  padding: 10px;
-  word-wrap: break-word;
-  word-break: break-all;
+  gap:5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.display .previous-operand {
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 24px;
+.DisplayDiv{
+  height: 35%;
 }
-.display .current-operand {
-  color: #fff;
-  font-size: 40px;
+.DisplayDiv h1{
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 6rem;
+}
+.OperDiv{
+  background-color: #e5e5e5;
+  border-radius: 3rem;
+  padding: 2rem;
+  
+}
+.previous-operand{
+  display: flex;
+  height: 8rem;
+  font-size: 5rem;
+  justify-content: end;
+}
+.current-operand{
+  display: flex;
+  height: 10rem;
+  justify-content: end;
+  font-size: 6rem
+}
+.BTN-DIV{
+  margin: auto;
+  width: 50%;
+  margin-top:5rem ;
+  padding-top: 5rem;
+  text-align: center;
+  height: 70%;
+  
+  
+}
+.BTN-DIV2{
+  width: 90%;
+  text-align: center;
+  height: 70%;
+  margin: auto;
+  padding-bottom: 10rem;
+  display: grid;
+  gap: .5rem;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  
+  
+}
+.BTN-DIV button{
+  width: 20rem;
+  height: 10rem;
+  font-size: 5rem;
+}
+@media screen and (min-width: 1019px) and (max-width: 2200px) {
+  .WrapSec{
+    background-color:#FCA311 ;
+    max-width: 80vw;
+    width: 100%;
+    height: 65vh;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    border-radius: .9rem;
+    flex-direction: column;
+    gap:5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .DisplayDiv{
+      height: 35%;
+  }
+  .DisplayDiv h1{
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+  .OperDiv{
+  background-color: #e5e5e5;
+  border-radius: 2rem;
+  padding: 1.6rem;
+  
+  }
+  .previous-operand{
+    display: flex;
+    height: 4rem;
+    font-size: 3.7rem;
+    justify-content: end;
+  }
+  .current-operand{
+    display: flex;
+    height: 6rem;
+    justify-content: end;
+    font-size: 4rem
+  }
+  .BTN-DIV{
+    margin: auto;
+    width: 50%;
+    padding-top: 5rem;
+    text-align: center;
+    height: 70%;
+  
+    
+  }
+  .BTN-DIV2{
+   width: 100%;
+   text-align: center;
+   height: 70%;
+   margin: auto;
+  display: grid;
+  gap: .6rem;
+  justify-content: space-evenly;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  
+  }
+  .BTN-DIV button{
+     width: 12rem;
+     height: 6rem;
+     font-size: 3rem;
+     margin-right: 20px;}
+}
+
+
+/* 
+/* Media query for tablets */
+@media screen and (min-width: 760px) and (max-width: 1019px) {
+
+  .WrapSec{
+    background-color:#FCA311 ;
+    width: 100%;
+    height: 90vh;
+    padding: 4rem;
+    margin: auto;
+    display: flex;
+    border-radius: 3rem;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .DisplayDiv{
+    height: 25%;
+}
+.WrapSec h1{
+  margin-bottom: 5rem;
+  text-align: center;
+  font-size: 4REM;
+}
+.OperDiv{
+background-color: #e5e5e5;
+border-radius: 1.6rem;
+padding: 2rem;
+/* height: 30%; */
+
+}
+.previous-operand{
+  display: flex;
+  height: 4rem;
+  font-size: 3.7rem;
+  justify-content: end;
+}
+.current-operand{
+  display: flex;
+  height: 5rem;
+  justify-content: end;
+  font-size: 4.2rem
+}
+.BTN-DIV{
+  margin: auto;
+  width: 100%;
+  margin-top:5rem ;
+  padding-top: 5rem;
+  text-align: center;
+  height: 70%;
+  width: fit-content;
+}
+.BTN-DIV2{
+ width: 100%;
+ text-align: center;
+ height: 70%;
+ padding: 10px;
+ margin: auto;
+
+}
+.BTN-DIV button{
+   width: 10rem;
+   height: 10rem;
+   font-size: 2.5rem;
+   
+}
+} 
+
+@media screen and (min-width: 330px) and (max-width: 760px) {
+
+  .WrapSec{
+    background-color:#FCA311 ;
+    width: 100%;
+    height: 90vh;
+    padding:0.6rem 2rem;
+    margin: auto;
+    display: flex;
+    border-radius: 1.8rem;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .DisplayDiv{
+    height: 20%;
+}
+.WrapSec h1{
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.7rem;
+}
+.OperDiv{
+background-color: #e5e5e5;
+border-radius: 1rem;
+padding: 08px;
+display: flex;
+flex-direction: column;
+gap: 0;
+
+}
+.previous-operand{
+  display: flex;
+  font-size: .9rem;
+  height: fit-content;
+  justify-content: end;
+}
+.current-operand{
+  display: flex;
+  height: fit-content;
+  justify-content: end;
+  font-size: 1.1rem
+}
+.BTN-DIV{
+  margin: auto;
+  width: 100%;
+  padding-top: 1.2rem;
+  text-align: center;
+  height: 80%;
+  width: fit-content;
+}
+.BTN-DIV2{
+ width: 100%;
+ text-align: center;
+ height: 70%;
+ margin: auto;
+
+}
+.BTN-DIV button{
+   width: 4rem;
+   height: 3rem;
+   font-size: .8rem;
+   
+}
+} 
+
+@media screen and (min-width: 250px) and (max-width: 329px) {
+
+  .WrapSec{
+    background-color:#FCA311 ;
+    width: 100%;
+    height: 90vh;
+    padding:0.3rem 1.6rem;
+    margin: auto;
+    display: flex;
+    border-radius: 1.8rem;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .DisplayDiv{
+    height: 20%;
+}
+.WrapSec h1{
+  margin-bottom: 1.1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+.OperDiv{
+background-color: #e5e5e5;
+border-radius: .6rem;
+padding: 6px;
+display: flex;
+flex-direction: column;
+gap: 0;
+
+}
+.previous-operand{
+  display: flex;
+  font-size: .8rem;
+  height: fit-content;
+  justify-content: end;
+}
+.current-operand{
+  display: flex;
+  height: fit-content;
+  justify-content: end;
+  font-size: 1rem
+}
+.BTN-DIV{
+  margin: auto;
+  width: 100%;
+  padding-top: 1rem;
+  text-align: center;
+  height: 80%;
+  width: fit-content;
+}
+.BTN-DIV2{
+ width: 100%;
+ text-align: center;
+ height: 70%;
+ margin: auto;
+
+}
+.BTN-DIV button{
+   width: 3rem;
+   height: 3rem;
+   font-size: .6rem;
+   
+}
 }
